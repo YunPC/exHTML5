@@ -2,8 +2,15 @@
 
 @import url(./normalize.css);
 
+
 html{
     font-size: 10px;
+}
+
+body *,
+body *::before,
+body *::after{
+    box-sizing: border-box;
 }
 
 body{
@@ -12,4 +19,64 @@ body{
     background-color: white;
     color: #181818;
     font-size: 1.4rem;
+}
+
+/* 레이아웃 */
+.container {
+    background-color: silver;
+}
+
+.header, .visual, .main, .slogan, .footer-inner{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: yellow;
+    height: 10vh;
+    width: 940px;
+    /* 빼고 난 뒤의 남는 여백을 자동으로 계산 */
+    margin: 0 auto;
+}
+
+.visual{
+    background-color: lime;
+    height: 10vh;
+}
+
+.main{
+    background-color: blue;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.group1 {
+    background-color: pink;
+    width: 250px;
+}
+
+.group2 {
+    background-color: skyblue;
+    width: 380px;
+}
+
+.group3 {
+    background-color: orange;
+    width: 190px;
+}
+
+.slogan{
+    background-color: purple;
+    height: 10vh;
+}
+
+.footer{
+    background-color: tomato;
+}
+
+.footer-inner{
+    background-color: gray;
+    height: 10vh;
 }
