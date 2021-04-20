@@ -46,15 +46,22 @@ body{
 
 .main{
     background-color: blue;
-    height: 60vh;
-    display: flex;
+    display: flow-root;
+    padding: 30px 15px;
+    /* display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 30px; */
 }
 
+.group{
+    height: 60vh;
+    float: left;
+    margin: 0 15px;
+}
 .group1 {
     background-color: pink;
     width: 250px;
+    float: right;
 }
 
 .group2 {
