@@ -2,6 +2,12 @@
 
 @import url(./normalize.css);
 
+/* 스타일 초기화 */
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 html{
     font-size: 10px;
@@ -37,20 +43,20 @@ body{
     /* 빼고 난 뒤의 남는 여백을 자동으로 계산 */
     margin: 0 auto;
     position: relative;
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px 50px;
 }
 
  /* 로고 */
  .logo {
      position: absolute;
-     background-color: yellow;
      margin: 0;
-     top: 45px;
+     top: 35px;
      left: 65px;
  }
 
  .logo a{
      display: block;
-     background-color: pink;
  }
 
  .logo img{
@@ -61,6 +67,29 @@ body{
 
  .member{
      margin: 0;
+     list-style: none;
+     padding-left: 0;
+     font-size: 0;
+     text-align: right;
+     padding-top: 2px;
+     padding-bottom: 2px;
+     position: relative;
+     left:10px;
+ }
+
+
+ .member li{
+     display: inline;
+     font-size: 1.4rem;
+     display: inline-block;
+     /* inline은 line heigth에 따라 위치가 결정된다. */
+ }
+
+ .member a{
+     /* 클릭할 수 있는 영역이 늘어나 접근성이 향상된다! */
+     display: inline-block;
+     padding: 8px 10px;
+     text-transform: uppercase;
  }
 
 .visual{
