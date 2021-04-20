@@ -30,14 +30,38 @@ body{
     width: 940px;
     margin: 0 auto;
 }
-
+/* 헤더 */
 .header {
-    background-color: yellow;
-    height: 10vh;
+    background-color: #fff;
     width: 940px;
     /* 빼고 난 뒤의 남는 여백을 자동으로 계산 */
     margin: 0 auto;
+    position: relative;
 }
+
+ /* 로고 */
+ .logo {
+     position: absolute;
+     background-color: yellow;
+     margin: 0;
+     top: 45px;
+     left: 65px;
+ }
+
+ .logo a{
+     display: block;
+     background-color: pink;
+ }
+
+ .logo img{
+     vertical-align: middle;
+ }
+
+ /* 안내 링크 */
+
+ .member{
+     margin: 0;
+ }
 
 .visual{
     background-color: lime;
