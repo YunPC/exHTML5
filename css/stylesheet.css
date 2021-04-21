@@ -3,7 +3,7 @@
 @import url(./normalize.css);
 
 /* 숨김 컨텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -41,7 +41,10 @@ body *::after{
 
 /* 레이아웃 */
 .container {
-    background-color: silver;
+    background-color: #ccc;
+    background-image: url(./images/bg_flower.png), linear-gradient(180deg, #eee 0%, #fefefe 30%, #fff 60%, #fff 100%);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
 }
 
 .header, .visual, .main, .slogan, .footer-inner{
@@ -193,9 +196,9 @@ body *::after{
 }
 
 .visual{
-    background-color: lime;
     height: 120px;
     position: relative;
+
 }
 
 .visual::before,
@@ -256,7 +259,6 @@ body *::after{
     z-index: 10;
     width: fit-content;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: yellow;
     margin: 0;
     animation-name: textAni;
     animation-duration: 3s;
@@ -264,33 +266,114 @@ body *::after{
 }
 
 .main{
-    background-color: blue;
+    background-color: white;
     display: flow-root;
     padding: 30px 15px;
+    min-height: 450px;
+    border-radius: 15px 15px 0 0;
     /* display: flex;
     justify-content: space-between;
     padding: 30px; */
 }
 
 .group{
-    height: 60vh;
-    float: left;
     margin: 0 15px;
+    float: left;
 }
+/* 로그인 폼 */
 .group1 {
-    background-color: pink;
     width: 250px;
-    float: right;
 }
 
 .group2 {
-    background-color: skyblue;
     width: 380px;
 }
 
 .group3 {
-    background-color: orange;
     width: 190px;
+}
+
+/* 로그인 */
+.login{
+    background: #e29c2b linear-gradient(to top, #e29c2b, #e25a2d);
+    padding: 25px 10px 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 0 #ccc;
+}
+
+.login-heading{
+    margin: 0;
+    color: #ff0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-indent: 10px;
+}
+
+.login-form {
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset{
+    border: 0 none;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.login-form label{
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    cursor: pointer;
+}
+
+.login-form input{
+    border: 1px solid #ccc;
+    padding: 2px 2px 2px 5px;
+    width: 95px;
+}
+
+.user-pwd{
+    margin-top: 5px;
+}
+
+.btn-login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 46px;
+    padding: 2px 5px;
+    border: 0;
+    background: #e25a2d;
+    color: #fff;
+    font-size: 1.3rem;
+    border-radius: 3px;
+}
+
+.sign{
+    background-color: #fff;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign a{
+    font-size: 1.2rem;
+}
+
+.sign .icon-right-open{
+    color: #e25a2d
 }
 
 .slogan{
