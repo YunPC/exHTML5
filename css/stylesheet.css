@@ -1,6 +1,18 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-
+@import url(./fontello.css);
 @import url(./normalize.css);
+
+/* 숨김 컨텐츠 */
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    visibility:hidden;
+    clip: rect(0,0,0,0);
+    clip-path: inset(50%);
+}
 
 /* 스타일 초기화 */
 /* 링크 스타일 */
@@ -13,18 +25,18 @@ html{
     font-size: 10px;
 }
 
-body *,
-body *::before,
-body *::after{
-    box-sizing: border-box;
-}
-
 body{
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-weight: 400;
     background-color: white;
     color: #181818;
     font-size: 1.4rem;
+}
+
+body *,
+body *::before,
+body *::after{
+    box-sizing: border-box;
 }
 
 /* 레이아웃 */
@@ -39,20 +51,20 @@ body{
 /* 헤더 */
 .header {
     background-color: #fff;
-    width: 940px;
     /* 빼고 난 뒤의 남는 여백을 자동으로 계산 */
-    margin: 0 auto;
     position: relative;
     border-radius: 0 0 15px 15px;
-    padding: 0 30px 50px;
+    padding: 0 30px;
 }
 
  /* 로고 */
  .logo {
      position: absolute;
-     margin: 0;
-     top: 35px;
+     margin-top: 0;
+     margin-bottom: 0;
+     top: 55px;
      left: 65px;
+     z-index: 10;
  }
 
  .logo a{
@@ -71,6 +83,7 @@ body{
      padding-left: 0;
      font-size: 0;
      text-align: right;
+     padding-left: 0;
      padding-top: 2px;
      padding-bottom: 2px;
      position: relative;
@@ -79,7 +92,6 @@ body{
 
 
  .member li{
-     display: inline;
      font-size: 1.4rem;
      display: inline-block;
      /* inline은 line heigth에 따라 위치가 결정된다. */
@@ -92,9 +104,163 @@ body{
      text-transform: uppercase;
  }
 
+ .navigation{
+     padding-bottom: 40px;
+ }
+
+ .menu {
+     background: #e25a2d linear-gradient(to bottom, #e25a2d 0%, #e29c2b 45%, #e29c2b 60%, #e25a2d 100% );
+     padding-left: 225px;
+     margin: 5px 0 0 0;
+     list-style: none;
+     /* border-top: 2px solid #181818; */
+     /* 상자 높이에 영향을 주지 않는다 */
+     box-shadow: 0 -2px 0 0 #181818;
+     border-radius: 0 0 5px 5px;
+     height: 45px;
+ }
+
+ .menu :focus{
+     outline: 0;
+ }
+
+/* 위치만 */
+ .menu-item {
+
+    position: relative;
+    float: left;
+    /* a한테 주면 선도 링크가 된다. */
+    border-left: 2px solid #fff;
+    
+    
+}
+/* 스타일만 */
+.menu-button {
+    display: block;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0 20px;
+    /* 중간에 있는 것처럼 만들 수 있다! */
+    line-height: 45px;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+    
+}
+
+.menu-act .menu-button{
+    color: yellow;
+}
+
+
+.menu-act .menu-button::after{
+    content: "";
+    display: block;
+    border-top: 2px solid black;
+    /* background: linear-gradient(to right, green, red); */
+}
+
+.sub-menu{
+     padding-left: 0;
+     margin: 0;
+     list-style: none;
+     /* 이러면 둘 다 올라가서 로고가 사라짐 z-index 요소 넣어야 한다! */
+     position: absolute;
+     display: none;
+     top:47px;
+     white-space: nowrap;
+ }
+
+.sub-menu1{
+    display: block;
+
+}
+
+.sub-menu1 .sub-menu2 .sub-menu3{
+    left: 0;
+}
+
+.sub-menu4 .sub-menu5 .sub-menu6{
+    right: 0;
+}
+
+.sub-menu li, .sub-menu a {
+    /* 부모 너비를 못 넘어감 */
+    display: inline-block;
+}
+
+.sub-menu a{
+    padding: 10px 10px 10px 0;
+}
+
 .visual{
     background-color: lime;
-    height: 10vh;
+    height: 120px;
+    position: relative;
+}
+
+.visual::before,
+.visual::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    /* animation-name: flowerAni;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+     */
+    animation: flowerAni 2s infinite alternate;
+}
+
+.visual::before{
+    background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+    background-position: 0 -10px, 670px 0;
+    /* 배경은 거꾸로 동작한다! */
+    /* background: url(./images/ani_flower_01.png) no-repeat 0 -10px, url(./images/ani_flower_02.png) no-repeat 670px 0 pink; */
+}
+.visual::after{
+    background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+    background-position: 300px 10px, 800px 0;
+    animation-delay: 1s;
+
+}
+
+@keyframes textAni {
+    0%{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+    }
+    100%{
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 75px);
+    }
+    
+}
+
+@keyframes flowerAni {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.visual-text{
+    position: relative;
+    z-index: 10;
+    width: fit-content;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: yellow;
+    margin: 0;
+    animation-name: textAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .main{
