@@ -376,6 +376,30 @@ body *::after{
     color: #e25a2d
 }
 
+/* 유효성 배너 검사 */
+
+.validation-list{
+    margin: 25px 0 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.validation-list li{
+    /* background-color: lightgray; */
+    
+}
+
+.validation-list a{
+    display: block;
+    border: 1px solid #aaa;
+    /* normal flow일 때만 병합이 된다. */
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 5px 7px 5px 45px;
+    background: url(./images/validation_icon.png) no-repeat 20px 50%, #ccc linear-gradient(180deg, #ccc, #eee);
+}
+
+
 .slogan{
     background-color: purple;
     height: 10vh;
