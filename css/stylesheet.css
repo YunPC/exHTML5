@@ -478,6 +478,49 @@ body *::after{
     margin-top: 5px;
     line-height: 1.5;
 }
+
+/* 검색 폼 */
+.search-form{
+    background: #ccc linear-gradient(180deg, #ccc, #fff);
+    border: 1px solid #aaa;
+    border-bottom-color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+}
+.search-form-container{
+    display: flex;
+    background-color: yellow;
+    justify-content: space-between;
+}
+
+.search-form label{
+    cursor: pointer;
+}
+
+[name="search"]{
+    width: 200px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 2px 2px 2px 5px;
+    margin-left: 5px;
+}
+.search-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-search{
+    background-color: #222;
+    color: #fff;
+    padding: 0 8px;
+    margin: 0;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    border: none;
+}
+
 /* 웹 관련 용어 */
 .slogan{
     background-color: silver;
