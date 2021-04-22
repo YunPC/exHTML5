@@ -398,10 +398,89 @@ body *::after{
     padding: 5px 7px 5px 45px;
     background: url(./images/validation_icon.png) no-repeat 20px 50%, #ccc linear-gradient(180deg, #ccc, #eee);
 }
+.term{
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+    margin-top: 20px;
+    /* border-top: 1px solid white;
+    display: flow-root;
+    border-radius: 15px;
+    padding: 5px; */
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px 15px 10px;
+}
+
+.term-heading{
+    /* padding-left: 10px;
+    font-size: 1.6rem; */
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.term-list{
+    background: yellow;
+    margin: 10px 0 0 0 0;
+}
+
+.term {
+    display: flow-root;
+}
+
+.term-list > :nth-child(6n+4),
+.term-list > :nth-child(6n+6){
+    float: left;
+}
+.term-list > :nth-child(6n+5){
+    float: right;
+}
+
+/* 한번 더 파악해보자! */
+/* .term-list :nth-child(1){
+    border: 2px solid green;
+} */
 
 
+.term-list-subject{
+    /* display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    margin-left: 4px;
+    color: blue; */
+    float:right;
+    width: 145px;
+    color: #296897;
+
+}
+
+.term-list-thumbnail{
+    /* float: left;
+    margin: 8px; */
+    margin-left: 0;
+    float: left;
+}
+
+/* 인라인을 인한 갭을 없앨 수 있다. */
+.term-list-thumbnail img{
+    display: block;
+}
+
+
+.term-list-brief{
+    /* display: inline-block;
+    margin: 0;
+    padding-top: 10px;
+    max-width: 160px;
+    margin-left: 4px; */
+    margin-left: 0;
+    float:right;
+    width: 145px;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+/* 웹 관련 용어 */
 .slogan{
-    background-color: purple;
+    background-color: silver;
     height: 10vh;
 }
 
