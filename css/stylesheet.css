@@ -489,7 +489,6 @@ body *::after{
 }
 .search-form-container{
     display: flex;
-    background-color: yellow;
     justify-content: space-between;
 }
 
