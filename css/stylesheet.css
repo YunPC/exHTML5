@@ -473,6 +473,72 @@ body *::after{
 .icon-plus{
   color: hsla(110, 50%, 30%, 1)
 }
+/* 새소식 */
+.news{
+    margin-top: 20px;
+    position: relative;
+}
+
+.news::before{
+    content: "";
+    /* absolute가 되면  */
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #ccc linear-gradient(90deg, #ccc, #fff);
+    top: 35px;
+}
+
+.news-heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: orange;
+    margin: 0;
+}
+
+.news-item{
+    margin-top: 35px;
+    padding-left: 130px;
+    position: relative;
+}
+
+.news-item-heading{
+    font-weight: 700;
+    margin: 0;
+}
+
+.news-item-date{
+    display: block;
+    margin-top: 5px;
+}
+
+.news-item-brief{
+    line-height: 1.5;
+    margin: 10px 0 0 0;
+}
+
+.news-item-thumbnail{
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    text-align: center;
+}
+
+.news-item-thumbnail img{
+    margin-bottom: 15px;
+    box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.news-more{
+    position: absolute;
+    padding: 8px;
+    top: -8px;
+    right: -8px;
+}
+
+
+
 
 .slogan{
   background-color: purple;
